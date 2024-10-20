@@ -6,13 +6,13 @@ function App() {
       <Routes>
         <Route path="/starting" element={<Starting />} />
         <Route path="/" element={<Main />} />
-        <Route path={`/profile?id=${userId}`} element={<Profile />} />
-        <Route path={`posts/${postId}`} element={<Post />} />
-        <Route path="posts/writes" element={<Writing />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/posts" element={<Post />} />
+        <Route path="/posts/writes" element={<Writing />} />
         <Route path="/login" element={<Login />} />
-        <Route path="users/signup" element={<Signup />} />
-        <Route path={`/badge/id=${userId}`} element={<Badge />} />
-        <Route path={`/posts/writes/${postId}`} element={<Writing />} />
+        <Route path="/users/signup" element={<Signup />} />
+        <Route path="/badge" element={<Badge />} />
+        <Route path="/chating" element={<Chating />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
