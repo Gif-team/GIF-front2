@@ -13,7 +13,7 @@ export function Header() {
       <div className="relative">
         <input
           type="text"
-          className="h-[34px] rounded-lg bg-primary-bg w-[600px]"
+          className="h-[34px] rounded-lg bg-primary-bg w-[600px] pl-10"
         />
         <svg
           className="absolute top-[17px] left-2 transform -translate-y-1/2"
