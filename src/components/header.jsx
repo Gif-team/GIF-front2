@@ -13,6 +13,7 @@ export function Header() {
       <div className="relative">
         <input
           type="text"
+          placeholder="찾고 싶은 물건을 입력해보세요!"
           className="h-[34px] rounded-lg bg-primary-bg w-[600px] pl-10"
         />
         <svg
