@@ -4,7 +4,7 @@ import { useState } from "react";
 export function Header() {
   const [alertPopUp, setAelrtPopUp] = useState(false);
   return (
-    <header className="p-2 flex justify-between border-b-4 border-primary-primary">
+    <header className="px-6 p-2 flex justify-between border-b-4 border-primary-primary">
       <img
         className="cursor-pointer w-[32px] h-[32px]"
         src={blueLogo}
@@ -40,7 +40,7 @@ export function Header() {
           />
         </svg>
       </div>
-      <div className="flex items-center gap-4 relative">
+      <div className="flex items-center gap-5 relative">
         <div className="w-1/3"></div>
         <svg
           className="cursor-pointer"
