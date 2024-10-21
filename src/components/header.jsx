@@ -45,8 +45,8 @@ export function Header() {
         <svg
           className="cursor-pointer"
           onClick={() => setAelrtPopUp(!alertPopUp)}
-          width="24"
-          height="24"
+          width="32"
+          height="32"
           viewBox="0 0 26 29"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +68,8 @@ export function Header() {
         </svg>
         <svg
           className="cursor-pointer"
-          width="24"
-          height="24"
+          width="32"
+          height="32"
           viewBox="0 0 36 36"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
