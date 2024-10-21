@@ -1,5 +1,6 @@
 import blueLogo from "../imgs/blueLogo.png";
 import { useState } from "react";
+import { Main } from "../pages/main";
 
 export function Header() {
   const [alertPopUp, setAelrtPopUp] = useState(false);
@@ -41,12 +42,14 @@ export function Header() {
         </svg>
       </div>
       <div className="flex items-center gap-5 relative">
-        <div className="w-1/3"></div>
         <svg
           className="cursor-pointer"
-          onClick={() => setAelrtPopUp(!alertPopUp)}
-          width="32"
-          height="32"
+          onClick={() => {
+            setAelrtPopUp(!alertPopUp);
+            Main(alertPopUp);
+          }}
+          width="28"
+          height="28"
           viewBox="0 0 26 29"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -68,8 +71,8 @@ export function Header() {
         </svg>
         <svg
           className="cursor-pointer"
-          width="32"
-          height="32"
+          width="28"
+          height="28"
           viewBox="0 0 36 36"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
