@@ -16,7 +16,7 @@ export function Header() {
         <input
           type="text"
           placeholder="찾고 싶은 물건을 입력해보세요!"
-          className="h-[34px] rounded-lg bg-primary-bg w-[600px] pl-10"
+          className="focus:outline-primary-primary h-[34px] rounded-lg bg-primary-bg w-[600px] pl-10"
         />
         <svg
           className="absolute top-[17px] left-2 transform -translate-y-1/2"
