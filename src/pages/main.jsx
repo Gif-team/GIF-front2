@@ -20,6 +20,7 @@ export function Main() {
           <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] bg-white p-5 z-20">
             <h5 className="text-lg font-semibold">알람</h5>
             <svg
+              onClick={() => setAlertPopUp(!alertPopUp)}
               className="cursor-pointer"
               width="32"
               height="32"
