@@ -1,9 +1,15 @@
 import blueLogo from "../imgs/blueLogo.png";
+import { useState } from "react";
 
 export function Header() {
+  const [alertPopUp, setAelrtPopUp] = useState(false);
   return (
     <header className="p-2 flex justify-between border-b-4 border-primary-primary">
-      <img className="w-[32px] h-[32px]" src={blueLogo} alt="logo" />
+      <img
+        className="cursor-pointer w-[32px] h-[32px]"
+        src={blueLogo}
+        alt="logo"
+      />
       <div className="relative">
         <input
           type="text"
@@ -33,8 +39,11 @@ export function Header() {
           />
         </svg>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 relative">
+        <div className="w-1/3"></div>
         <svg
+          className="cursor-pointer"
+          onClick={() => setAelrtPopUp(!alertPopUp)}
           width="24"
           height="24"
           viewBox="0 0 26 29"
@@ -57,6 +66,7 @@ export function Header() {
           />
         </svg>
         <svg
+          className="cursor-pointer"
           width="24"
           height="24"
           viewBox="0 0 36 36"
