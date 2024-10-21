@@ -6,7 +6,7 @@ export function Header() {
   const { alertPopUp, setAlertPopUp } = useContext(AlertContext);
 
   return (
-    <header className="flex justify-between p-2 px-6 border-b-4 border-primary-primary">
+    <header className="flex justify-between p-3 px-6 border-b-4 border-primary-primary">
       <img
         className="cursor-pointer w-[32px] h-[32px]"
         src={blueLogo}
