@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AlertContext } from "../context/alertContext";
 import { useState } from "react";
 import { Header } from "../components/header";
+import { Post } from "../components/post";
 
 export function Main() {
   const { alertPopUp, setAlertPopUp } = useContext(AlertContext);
@@ -48,8 +49,15 @@ export function Main() {
           </div>
         </>
       ) : null}
-      <div className="w-[60%] flex flex-wrap">
+      <div className="w-[60%] flex flex-col">
         <h1 className="m-5 text-2xl font-bold">최신 게시물</h1>
+        <div className="flex flex-wrap">
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </div>
       </div>
       <div className="fixed flex flex-col gap-4 bottom-6 right-16">
         <svg
