@@ -1,6 +1,6 @@
 export function Starting() {
   return (
-    <div className="flex flex-col items-center justify-around m-[200px] gap-32">
+    <div className="overflow-y-hidden flex flex-col items-center justify-around m-[190px] gap-32">
       <svg
         width="320"
         height="180"
