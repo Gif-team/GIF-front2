@@ -50,7 +50,7 @@ export function Main() {
         </>
       ) : null}
       <div className="w-[60%] flex flex-col">
-        <h1 className="m-5 text-2xl font-bold">최신 게시물</h1>
+        <h1 className="m-5 mt-20 text-2xl font-bold">최신 게시물</h1>
         <div className="flex flex-wrap">
           <Post />
           <Post />
