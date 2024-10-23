@@ -1,3 +1,10 @@
+import {
+  ChatingSelected,
+  ChatingUnselected,
+  ChatingBlue,
+  ChatingWhite,
+} from "../components/chatingList";
+
 export function Chating() {
   return (
     <div className="flex justify-center">
@@ -8,143 +15,29 @@ export function Chating() {
         </header>
         <main>
           {/* MAP함수 사용예정 */}
-          <div className="flex items-center p-[15px] bg-[#F0F0F0]">
-            {/* svg */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 72 72"
-              fill="none"
-            >
-              <g clipPath="url(#clip0_124_771)">
-                <rect width="72" height="72" rx="36" fill="#CBCCCE" />
-                <path
-                  d="M36.0605 45C43.9337 45 50.3105 38.6231 50.3105 30.75C50.3105 22.8769 43.9337 16.5 36.0605 16.5C28.1874 16.5 21.8105 22.8769 21.8105 30.75C21.8105 38.6231 28.1874 45 36.0605 45ZM36.0605 52.125C26.5487 52.125 7.56055 56.8987 7.56055 66.375V69.9375C7.56055 71.8969 9.16367 73.5 11.123 73.5H60.998C62.9574 73.5 64.5605 71.8969 64.5605 69.9375V66.375C64.5605 56.8987 45.5724 52.125 36.0605 52.125Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_124_771">
-                  <rect width="72" height="72" rx="36" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <section className="pl-[15px]">
-              <h3 className="text-[16px] font-semibold">김지훈</h3>
-              <h4 className="text-[14px] font-medium">교동이를 찾습니다.</h4>
-            </section>
-          </div>
-          <div className="flex items-center p-[15px]">
-            {/* svg */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 72 72"
-              fill="none"
-            >
-              <g clipPath="url(#clip0_124_771)">
-                <rect width="72" height="72" rx="36" fill="#CBCCCE" />
-                <path
-                  d="M36.0605 45C43.9337 45 50.3105 38.6231 50.3105 30.75C50.3105 22.8769 43.9337 16.5 36.0605 16.5C28.1874 16.5 21.8105 22.8769 21.8105 30.75C21.8105 38.6231 28.1874 45 36.0605 45ZM36.0605 52.125C26.5487 52.125 7.56055 56.8987 7.56055 66.375V69.9375C7.56055 71.8969 9.16367 73.5 11.123 73.5H60.998C62.9574 73.5 64.5605 71.8969 64.5605 69.9375V66.375C64.5605 56.8987 45.5724 52.125 36.0605 52.125Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_124_771">
-                  <rect width="72" height="72" rx="36" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <section className="pl-[15px]">
-              <h3 className="text-[16px] font-semibold">김지훈</h3>
-              <h4 className="text-[14px] font-medium">교동이를 찾습니다.</h4>
-            </section>
-          </div>
+          <ChatingSelected />
+          <ChatingUnselected />
         </main>
       </div>
-
       {/* 채팅창 */}
       <div className="border border-[#C4C4C4] w-[600px] h-[100%]">
         <header className="p-[10px] border-b-[1px]">
-          <h2 className="font-bold text-[20px]">김지훈</h2>
-          <h4 className="font-medium text-[14px]">교동이를 찾습니다.</h4>
+          <h2 className="font-bold text-[20px]">{/*이름추가*/}</h2>
+          <h4 className="font-medium text-[14px]">{/*상태추가*/}</h4>
         </header>
         <main>
-          <div className="flex items-center p-[15px]">
-            {/* svg */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 72 72"
-              fill="none"
-            >
-              <g clipPath="url(#clip0_124_771)">
-                <rect width="72" height="72" rx="36" fill="#CBCCCE" />
-                <path
-                  d="M36.0605 45C43.9337 45 50.3105 38.6231 50.3105 30.75C50.3105 22.8769 43.9337 16.5 36.0605 16.5C28.1874 16.5 21.8105 22.8769 21.8105 30.75C21.8105 38.6231 28.1874 45 36.0605 45ZM36.0605 52.125C26.5487 52.125 7.56055 56.8987 7.56055 66.375V69.9375C7.56055 71.8969 9.16367 73.5 11.123 73.5H60.998C62.9574 73.5 64.5605 71.8969 64.5605 69.9375V66.375C64.5605 56.8987 45.5724 52.125 36.0605 52.125Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_124_771">
-                  <rect width="72" height="72" rx="36" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <section
-              className="ml-[15px] p-[10px] bg-[#7E8EF1] rounded-tr-[15px] rounded-b-[15px] 
-              break-words
-              max-w-[400px]
-              font-medium
-              text-[#FFFFFF]"
-            >
-              교동이를 찾고있습니다...
-            </section>
-          </div>
-          <div className="flex flex-row-reverse items-center p-[15px]">
-            {/* svg */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 72 72"
-              fill="none"
-            >
-              <g clipPath="url(#clip0_124_771)">
-                <rect width="72" height="72" rx="36" fill="#CBCCCE" />
-                <path
-                  d="M36.0605 45C43.9337 45 50.3105 38.6231 50.3105 30.75C50.3105 22.8769 43.9337 16.5 36.0605 16.5C28.1874 16.5 21.8105 22.8769 21.8105 30.75C21.8105 38.6231 28.1874 45 36.0605 45ZM36.0605 52.125C26.5487 52.125 7.56055 56.8987 7.56055 66.375V69.9375C7.56055 71.8969 9.16367 73.5 11.123 73.5H60.998C62.9574 73.5 64.5605 71.8969 64.5605 69.9375V66.375C64.5605 56.8987 45.5724 52.125 36.0605 52.125Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_124_771">
-                  <rect width="72" height="72" rx="36" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <section
-              className="mr-[15px] p-[10px] bg-[#EEEEEE] rounded-tl-[15px] rounded-b-[15px]
-              break-words
-              max-w-[400px]
-              font-medium
-              text-[#000000]"
-            >
-              교동이 저희 반에서 보관중입니다.
-            </section>
-          </div>
+          {/* MAP함수 사용예정 */}
+          <ChatingBlue />
+          <ChatingWhite />
         </main>
         <footer className="flex justify-center items-center border-t border-[#C4C4C4] p-[20px]">
           <div
             className="flex justify-around items-center bg-[#F0F0F0]  
-            p-[10px] flex-grow rounded-3xl"
+      p-[10px] flex-grow rounded-3xl"
           >
             <textarea
               className="flex-grow bg-transparent 
-              border-none outline-none resize-none no-scrollbar"
+        border-none outline-none resize-none no-scrollbar"
               rows="1"
               placeholder="메세지를 보내보세요!"
             />
@@ -175,8 +68,8 @@ export function Chating() {
           </div>
           <button
             className="flex justify-center items-center 
-            bg-[#5956E8] rounded-[50%] 
-            w-[34px] h-[34px]"
+      bg-[#5956E8] rounded-[50%] 
+      w-[34px] h-[34px]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
