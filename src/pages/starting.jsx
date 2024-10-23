@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export function Starting() {
+  const navigate = useNavigate();
   return (
     <div className="overflow-y-hidden flex flex-col items-center justify-around m-[190px] gap-32">
       <svg
@@ -188,7 +191,10 @@ export function Starting() {
           </filter>
         </defs>
       </svg>
-      <button className="px-24 py-2 font-semibold text-white rounded-md bg-primary-primary">
+      <button
+        onClick={() => navigate("/login")}
+        className="px-24 py-2 font-semibold text-white rounded-md bg-primary-primary"
+      >
         로그인
       </button>
     </div>
