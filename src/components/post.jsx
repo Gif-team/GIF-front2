@@ -9,7 +9,7 @@ export function Post() {
         <div className=" opacity-[0.5] text-[13px]">
           찾습니다 ∙ 1층 ∙ 본관 ∙ 2시간전
         </div>
-        <span>사례금 : 3,000원</span>
+        <span className="text-gray-fee">사례금 : 3,000원</span>
       </div>
     </div>
   );
