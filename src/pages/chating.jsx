@@ -1,3 +1,7 @@
 export function Chating() {
-  return <h1>Chating</h1>;
+  return (
+    <h1>
+      <div></div>
+    </h1>
+  );
 }
