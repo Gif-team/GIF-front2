@@ -14,6 +14,7 @@ module.exports = {
           400: "#C4C4C4",
           300: "#F0F0F0",
           border: "#B5B5B5",
+          fee: "#555",
         },
       },
     },
