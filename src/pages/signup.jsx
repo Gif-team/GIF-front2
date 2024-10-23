@@ -7,11 +7,13 @@ export function SignUp() {
   const [passwordCheck, setPasswordCheck] = useState("");
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col items-center justify-between gap-8 p-4 border rounded-md border-gray-login">
+      <div className="flex flex-col items-center mt-[120px] justify-between gap-8 p-8 border rounded-lg border-gray-login">
         <img src={blueLogo} className="w-[90px]" alt="로고" />
         <div className="flex flex-col justify-between gap-3">
           <div className="flex flex-col">
-            <label htmlFor="email">이메일</label>
+            <label htmlFor="email" className="text-[14px] font-medium">
+              이메일
+            </label>
             <input
               id="email"
               placeholder="학교 이메일을 입력해주세요..."
@@ -23,7 +25,9 @@ export function SignUp() {
           </div>
 
           <div className="flex flex-col ">
-            <label htmlFor="password">비밀번호</label>
+            <label className="text-[14px] font-medium" htmlFor="password">
+              비밀번호
+            </label>
             <input
               id="password"
               placeholder="영문, 숫자, 특수문자 2개 이상 포함 8글자 이상"
@@ -35,7 +39,9 @@ export function SignUp() {
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="passwordCheck">비밀번호 확인</label>
+            <label className="text-[14px] font-medium" htmlFor="passwordCheck">
+              비밀번호 확인
+            </label>
             <input
               id="passwordCheck"
               type="password"
