@@ -14,10 +14,11 @@ export function SignUp() {
             <label htmlFor="email">이메일</label>
             <input
               id="email"
+              placeholder="학교 이메일을 입력해주세요..."
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-[360px] h-[40px] border border-gray-login rounded-lg"
+              className="text-[12px] p-3 w-[360px] h-[40px] border border-gray-login rounded-lg"
             />
           </div>
 
@@ -25,10 +26,11 @@ export function SignUp() {
             <label htmlFor="password">비밀번호</label>
             <input
               id="password"
+              placeholder="영문, 숫자, 특수문자 2개 이상 포함 8글자 이상"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-[360px] h-[40px] border border-gray-login rounded-lg"
+              className="text-[12px] p-3 w-[360px] h-[40px] border border-gray-login rounded-lg"
             />
           </div>
 
@@ -37,9 +39,10 @@ export function SignUp() {
             <input
               id="passwordCheck"
               type="password"
+              placeholder="비밀번호를 재입력해주세요..."
               value={passwordCheck}
               onChange={(e) => setPasswordCheck(e.target.value)}
-              className="w-[360px] h-[40px] border border-gray-login rounded-lg"
+              className=" text-[12px] p-3 w-[360px] h-[40px] border border-gray-login rounded-lg"
             />
           </div>
         </div>
