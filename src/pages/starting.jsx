@@ -1,6 +1,6 @@
 export function Starting() {
   return (
-    <div className="flex flex-col items-center justify-around m-[200px] gap-36">
+    <div className="flex flex-col items-center justify-around m-[200px] gap-32">
       <svg
         width="320"
         height="180"
@@ -188,7 +188,7 @@ export function Starting() {
           </filter>
         </defs>
       </svg>
-      <button className="px-24 py-2 font-semibold text-white bg-primary-primary">
+      <button className="px-24 py-2 font-semibold text-white rounded-md bg-primary-primary">
         로그인
       </button>
     </div>
