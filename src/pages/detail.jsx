@@ -1,28 +1,56 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ExamImg from "../imgs/Rectangle 27.png";
+import ExamImg2 from "../imgs/blueLogo.png";
 
 export function Detail() {
-  // 불리언
-  const [likeBool, setLikeBool] = useState(true);
-
-  // 하트 색깔
+  // 좋아요
+  const [likeBool, setLikeBool] = useState(false);
   const [likeColor, setLikeColor] = useState("#E9E9E9");
-
-  // 좋아요 숫자
   const [likeCount, setCount] = useState(0);
 
+  // 좋아요 토글
   const ToggleLike = () => {
     setLikeBool(!likeBool);
-    //console.log(likeBool);
+  };
 
+  // 좋아요 useEffect
+  useEffect(() => {
     if (likeBool === true) {
       setCount(likeCount + 1);
       setLikeColor("#d35858");
-    } else {
+    } else if (likeBool === false && likeCount >= 1) {
       setCount(likeCount - 1);
       setLikeColor("#E9E9E9");
     }
+  }, [likeBool]);
+
+  // 이미지 URL
+  const imgArray = [ExamImg, ExamImg2]; /*이미지 배열*/
+  const [imgCnt, setImgCnt] = useState(0);
+  const [imgSrc, setImgSrc] = useState(imgArray[imgCnt]);
+
+  // 이미지 전환
+  const LeftArrow = () => {
+    if (imgCnt >= 1) {
+      setImgCnt(imgCnt - 1);
+    } else if (imgCnt === 0) {
+      // 이미지가 더 이상 없을 때 전환
+      setImgCnt(imgArray.length - 1);
+    }
   };
+  const RightArrow = () => {
+    if (imgCnt < imgArray.length - 1) {
+      setImgCnt(imgCnt + 1);
+    } else if (imgCnt === imgArray.length - 1) {
+      // 이미지가 더 이상 없을 때 전환
+      setImgCnt(0);
+    }
+  };
+
+  // 이미지 useEffect
+  useEffect(() => {
+    setImgSrc(imgArray[imgCnt]);
+  }, [imgCnt]);
 
   return (
     <div className="flex mt-[60px] items-center justify-center flex-col p-[25px]">
@@ -30,6 +58,7 @@ export function Detail() {
         {/* 왼쪽 화살표 */}
         <svg
           className="cursor-pointer"
+          onClick={LeftArrow}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -42,10 +71,15 @@ export function Detail() {
           />
         </svg>
         {/* 이미지 추가 (필수) */}
-        <img src={ExamImg} alt="img" className="w-[550px] h-[550px]" />
+        <img
+          src={imgSrc}
+          alt="img"
+          className="w-[550px] h-[550px] select-none rounded-2xl"
+        />
         {/* 오른쪽 화살표 */}
         <svg
           className="cursor-pointer"
+          onClick={RightArrow}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
@@ -84,7 +118,7 @@ export function Detail() {
           {/* 이름 */}
           <h2 className="pl-[10px] font-bold text-[20px]">{/*이름추가*/}</h2>
           {/* 채팅버튼 */}
-          <button className="ml-auto bg-primary-primary rounded-2xl px-[10px] py-[5px] text-white">
+          <button className="ml-auto bg-primary-primary rounded-2xl px-[10px] py-[5px] text-white select-none">
             채팅하기
           </button>
         </header>
