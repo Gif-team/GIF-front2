@@ -37,8 +37,8 @@ export function Profile() {
         </ul>
       </div>
       <div>
-        <h3 className=" text-[24px] font-medium">내가 작성한 글</h3>
-        <div className="border-x border-t flex flex-wrap">
+        <h3 className=" text-[24px] font-medium mb-3">내가 작성한 글</h3>
+        <div className="border flex flex-wrap">
           {/* map 사용 예정 */}
           <Post />
           <Post />
