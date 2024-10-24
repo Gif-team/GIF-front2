@@ -1,8 +1,8 @@
-import { ProfileList } from "../components/profileList";
+import { Post } from "../components/post";
 
 export function Profile() {
   return (
-    <main className="mt-[60px] w-[40%]">
+    <main className="mt-[60px] w-[674px]">
       <div className="flex items-center pt-[10px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +38,11 @@ export function Profile() {
       </div>
       <div>
         <h3 className=" text-[24px] font-medium">내가 작성한 글</h3>
-        <div className="border-x border-t">
+        <div className="border-x border-t flex flex-wrap">
           {/* map 사용 예정 */}
-          <ProfileList />
+          <Post />
+          <Post />
+          <Post />
         </div>
       </div>
     </main>
