@@ -42,7 +42,7 @@ export function Badge() {
         </>
       ) : null}
       <div className="flex justify-center flex-col w-[40%] m-20">
-        <h1 className="text-[36px] font-semibold">뱃지</h1>
+        <h1 className="text-[36px] font-semibold mb-4">뱃지</h1>
         <div className="flex gap-20">
           <div className="flex flex-col items-center">
             <svg
