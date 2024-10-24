@@ -41,7 +41,7 @@ export function SignUp() {
             <label
               htmlFor="email"
               className={`${
-                emailError ? "text-primary-errorcolor " : "text-gray-login"
+                emailError ? "text-primary-errorcolor " : "text-black"
               } text-[14px] font-medium`}
             >
               이메일
@@ -52,7 +52,7 @@ export function SignUp() {
               type="text"
               value={email}
               onChange={handleEmailChange}
-              className={`text-[14px] p-3 w-[360px] h-[40px] border  ${
+              className={`focus:outline-none text-[14px] p-3 w-[360px] h-[40px] border  ${
                 emailError
                   ? "border-primary-errorcolor rounded-lg"
                   : "border-gray-login rounded-lg"
@@ -70,7 +70,7 @@ export function SignUp() {
           <div className="flex flex-col ">
             <label
               className={` text-[14px] font-medium ${
-                passwordError ? "text-primary-errorcolor " : "text-gray-login"
+                passwordError ? "text-primary-errorcolor " : "text-black"
               }`}
               htmlFor="password"
             >
@@ -82,7 +82,7 @@ export function SignUp() {
               type="password"
               value={passwordValue}
               onChange={handlePasswordChange}
-              className={`text-[14px] p-3 w-[360px] h-[40px] border  ${
+              className={`focus:outline-none text-[14px] p-3 w-[360px] h-[40px] border  ${
                 passwordError
                   ? "border-primary-errorcolor rounded-lg"
                   : "border-gray-login rounded-lg"
@@ -100,9 +100,7 @@ export function SignUp() {
           <div className="flex flex-col">
             <label
               className={`text-[14px] font-medium" ${
-                passwordCheckError
-                  ? "text-primary-errorcolor "
-                  : "text-gray-login"
+                passwordCheckError ? "text-primary-errorcolor " : "text-black"
               }`}
               htmlFor="passwordChec"
             >
@@ -114,7 +112,7 @@ export function SignUp() {
               placeholder="비밀번호를 재입력해주세요..."
               value={passwordCheckValue}
               onChange={handlePasswordCheckChange}
-              className={`text-[14px] p-3 w-[360px] h-[40px] border  ${
+              className={`focus:outline-none text-[14px] p-3 w-[360px] h-[40px] border  ${
                 passwordCheckError
                   ? "border-primary-errorcolor rounded-lg"
                   : "border-gray-login rounded-lg"
@@ -124,7 +122,9 @@ export function SignUp() {
               <div className="min-h-5 text-primary-errorcolor font-semibold text-[12px]">
                 비밀번호가 일치하지 않아요
               </div>
-            ):<div className="min-h-5"></div>}
+            ) : (
+              <div className="min-h-5"></div>
+            )}
           </div>
         </div>
         <button
