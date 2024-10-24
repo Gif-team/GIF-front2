@@ -54,7 +54,7 @@ export function Badge() {
             >
               <rect width="150" height="150" rx="40" fill="#D9D9D9" />
             </svg>
-            <span>탐색왕</span>
+            <span className="text-[20px] font-semibold">탐색왕</span>
           </div>
           <div className="flex flex-col items-center">
             <svg
@@ -66,7 +66,7 @@ export function Badge() {
             >
               <rect width="150" height="150" rx="40" fill="#D9D9D9" />
             </svg>
-            <span>깜빡이</span>
+            <span className="text-[20px] font-semibold">깜빡이</span>
           </div>
           <div className="flex flex-col items-center">
             <svg
@@ -78,7 +78,7 @@ export function Badge() {
             >
               <rect width="150" height="150" rx="40" fill="#D9D9D9" />
             </svg>
-            <span>인기왕</span>
+            <span className="text-[20px] font-semibold">인기왕</span>
           </div>
         </div>
       </div>
