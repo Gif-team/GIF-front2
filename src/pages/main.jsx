@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { AlertContext } from "../context/alertContext";
 import { useState } from "react";
 import { Header } from "../components/header";
 import { Post } from "../components/post";
+import { AlertContext } from "../context/alertContext";
 
 export function Main() {
   const { alertPopUp, setAlertPopUp } = useContext(AlertContext);
