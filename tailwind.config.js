@@ -15,6 +15,7 @@ module.exports = {
           300: "#F0F0F0",
           border: "#B5B5B5",
           fee: "#555",
+          login: "#B4B5B7",
         },
       },
     },
