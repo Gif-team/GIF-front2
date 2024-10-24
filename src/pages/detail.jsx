@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ExamImg from "../imgs/Rectangle 27.png";
-import ExamImg2 from "../imgs/blueLogo.png";
 
 export function Detail() {
   // 좋아요
@@ -25,7 +23,7 @@ export function Detail() {
   }, [likeBool]);
 
   // 이미지 URL
-  const imgArray = [ExamImg, ExamImg2]; /*이미지 배열*/
+  const imgArray = []; /*이미지 배열에 이미지 받아오기*/
   const [imgCnt, setImgCnt] = useState(0);
   const [imgSrc, setImgSrc] = useState(imgArray[imgCnt]);
 
