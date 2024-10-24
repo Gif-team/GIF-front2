@@ -58,16 +58,18 @@ export function SignUp() {
                   : "border-gray-login rounded-lg"
               }`}
             />
-            {emailError && (
-              <div className="text-primary-errorcolor font-semibold text-[12px]">
+            {emailError ? (
+              <div className="text-primary-errorcolor min-h-5 font-semibold text-[12px]">
                 올바른 이메일 주소를 입력하세요
               </div>
+            ) : (
+              <div className="min-h-5"></div>
             )}
           </div>
 
           <div className="flex flex-col ">
             <label
-              className={`text-[14px] font-medium ${
+              className={` text-[14px] font-medium ${
                 passwordError ? "text-primary-errorcolor " : "text-gray-login"
               }`}
               htmlFor="password"
@@ -86,10 +88,12 @@ export function SignUp() {
                   : "border-gray-login rounded-lg"
               }`}
             />
-            {passwordError && (
-              <div className="text-primary-errorcolor font-semibold text-[12px]">
+            {passwordError ? (
+              <div className="min-h-5 text-primary-errorcolor font-semibold text-[12px]">
                 영문, 숫자, 특수문자를 포함하여 8글자 이상으로 적어주세요
               </div>
+            ) : (
+              <div className="min-h-5"></div>
             )}
           </div>
 
@@ -116,11 +120,11 @@ export function SignUp() {
                   : "border-gray-login rounded-lg"
               }`}
             />
-            {passwordCheckError && (
-              <div className="text-primary-errorcolor font-semibold text-[12px]">
+            {passwordCheckError ? (
+              <div className="min-h-5 text-primary-errorcolor font-semibold text-[12px]">
                 비밀번호가 일치하지 않아요
               </div>
-            )}
+            ):<div className="min-h-5"></div>}
           </div>
         </div>
         <button
