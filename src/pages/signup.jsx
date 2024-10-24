@@ -38,7 +38,12 @@ export function SignUp() {
         <img src={blueLogo} className="w-[90px]" alt="로고" />
         <div className="flex flex-col justify-between gap-3">
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-[14px] font-medium">
+            <label
+              htmlFor="email"
+              className={`${
+                emailError ? "text-primary-errorcolor " : "text-gray-login"
+              } text-[14px] font-medium`}
+            >
               이메일
             </label>
             <input
@@ -47,13 +52,26 @@ export function SignUp() {
               type="text"
               value={email}
               onChange={handleEmailChange}
-              className="text-[14px] focus:border-primary-primary p-3 w-[360px] h-[40px] border border-gray-login rounded-lg"
+              className={`text-[14px] p-3 w-[360px] h-[40px] border  ${
+                emailError
+                  ? "border-primary-errorcolor rounded-lg"
+                  : "border-gray-login rounded-lg"
+              }`}
             />
-            {emailError && <div>올바른 이메일 주소를 입력하세요</div>}
+            {emailError && (
+              <div className="text-primary-errorcolor font-semibold text-[12px]">
+                올바른 이메일 주소를 입력하세요
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col ">
-            <label className="text-[14px] font-medium" htmlFor="password">
+            <label
+              className={`text-[14px] font-medium ${
+                passwordError ? "text-primary-errorcolor " : "text-gray-login"
+              }`}
+              htmlFor="password"
+            >
               비밀번호
             </label>
             <input
@@ -62,17 +80,28 @@ export function SignUp() {
               type="password"
               value={passwordValue}
               onChange={handlePasswordChange}
-              className="text-[14px] p-3 w-[360px] focus:border-primary-primary h-[40px] border border-gray-login rounded-lg"
+              className={`text-[14px] p-3 w-[360px] h-[40px] border  ${
+                passwordError
+                  ? "border-primary-errorcolor rounded-lg"
+                  : "border-gray-login rounded-lg"
+              }`}
             />
             {passwordError && (
-              <div>
+              <div className="text-primary-errorcolor font-semibold text-[12px]">
                 영문, 숫자, 특수문자를 포함하여 8글자 이상으로 적어주세요
               </div>
             )}
           </div>
 
           <div className="flex flex-col">
-            <label className="text-[14px] font-medium" htmlFor="passwordCheck">
+            <label
+              className={`text-[14px] font-medium" ${
+                passwordCheckError
+                  ? "text-primary-errorcolor "
+                  : "text-gray-login"
+              }`}
+              htmlFor="passwordChec"
+            >
               비밀번호 확인
             </label>
             <input
@@ -81,9 +110,17 @@ export function SignUp() {
               placeholder="비밀번호를 재입력해주세요..."
               value={passwordCheckValue}
               onChange={handlePasswordCheckChange}
-              className="text-[14px] p-3 w-[360px] h-[40px] border border-gray-login rounded-lg"
+              className={`text-[14px] p-3 w-[360px] h-[40px] border  ${
+                passwordCheckError
+                  ? "border-primary-errorcolor rounded-lg"
+                  : "border-gray-login rounded-lg"
+              }`}
             />
-            {passwordCheckError && <div>비밀번호가 일치하지 않아요</div>}
+            {passwordCheckError && (
+              <div className="text-primary-errorcolor font-semibold text-[12px]">
+                비밀번호가 일치하지 않아요
+              </div>
+            )}
           </div>
         </div>
         <button
