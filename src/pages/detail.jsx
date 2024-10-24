@@ -2,13 +2,26 @@ import React, { useState } from "react";
 import ExamImg from "../imgs/Rectangle 27.png";
 
 export function Detail() {
-  const [like, setLike] = useState(false);
-  const [heart, setHeart] = useState(0);
+  // 불리언
+  const [likeBool, setLikeBool] = useState(true);
+
+  // 하트 색깔
+  const [likeColor, setLikeColor] = useState("#E9E9E9");
+
+  // 좋아요 숫자
+  const [likeCount, setCount] = useState(0);
 
   const ToggleLike = () => {
-    setLike(!like);
-    console.log(like);
-    like === true ? setHeart(heart + 1) : setHeart(heart - 1);
+    setLikeBool(!likeBool);
+    //console.log(likeBool);
+
+    if (likeBool === true) {
+      setCount(likeCount + 1);
+      setLikeColor("#d35858");
+    } else {
+      setCount(likeCount - 1);
+      setLikeColor("#E9E9E9");
+    }
   };
 
   return (
@@ -91,7 +104,7 @@ export function Detail() {
               >
                 <path
                   d="M23.2265 3.76815C22.6645 3.20759 21.9972 2.76292 21.2628 2.45954C20.5284 2.15615 19.7412 2 18.9463 2C18.1513 2 17.3641 2.15615 16.6297 2.45954C15.8953 2.76292 15.228 3.20759 14.666 3.76815L13.4997 4.93095L12.3334 3.76815C11.1982 2.6364 9.65854 2.00059 8.05315 2.00059C6.44775 2.00059 4.90811 2.6364 3.77293 3.76815C2.63774 4.89989 2 6.43487 2 8.03541C2 9.63594 2.63774 11.1709 3.77293 12.3027L4.93926 13.4655L13.4997 22L22.0602 13.4655L23.2265 12.3027C23.7887 11.7424 24.2348 11.0771 24.5391 10.3449C24.8434 9.61276 25 8.82796 25 8.03541C25 7.24285 24.8434 6.45806 24.5391 5.72587C24.2348 4.99368 23.7887 4.32844 23.2265 3.76815Z"
-                  stroke="#9F9F9F"
+                  stroke={likeColor}
                   strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -99,7 +112,7 @@ export function Detail() {
               </svg>
               {/* 좋아요 카운트 */}
               <p className="font-extrabold text-[26px] w-[30px] select-none">
-                {heart}
+                {likeCount}
               </p>
             </div>
           </section>
