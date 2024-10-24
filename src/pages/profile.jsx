@@ -3,7 +3,7 @@ import { ProfileList } from "../components/profileList";
 export function Profile() {
   return (
     <main className="mt-[60px] w-[40%]">
-      <div className="flex items-center">
+      <div className="flex items-center pt-[10px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="72"

@@ -3,7 +3,7 @@ import React from "react";
 export function ProfileList() {
   return (
     <div className="flex border-b p-6">
-      <img src="" alt="" className="w-36 h-36" />
+      <img src="" alt="" className="w-36 h-36 rounded-lg" />
       <div className="flex flex-col justify-center items-start ml-5">
         <h1>교동이를 찾습니다.</h1>
         <h2>사례금 2000원</h2>
