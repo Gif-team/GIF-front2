@@ -34,7 +34,7 @@ export function SignUp() {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col items-center mt-[120px] justify-between gap-8 p-8 border rounded-lg border-gray-login">
+      <div className="flex flex-col items-center mt-[110px] justify-between gap-8 p-8 border rounded-lg border-gray-login">
         <img src={blueLogo} className="w-[90px]" alt="로고" />
         <div className="flex flex-col justify-between gap-3">
           <div className="flex flex-col">
